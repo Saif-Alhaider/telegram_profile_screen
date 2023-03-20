@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layoutDescription="@xml/activity_main_scene"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    >
 
 
     <ImageView
@@ -23,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Saif Alhaider"
+        android:textFontWeight="800"
+        android:fontFamily="@font/opensans_regular"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="last scene recently"
+        android:textFontWeight="800"
+        android:fontFamily="@font/opensans_regular"
         android:textColor="#E086858a"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/profile_image"
@@ -43,23 +49,98 @@
         android:id="@+id/detailed_info"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#1c1c1c"
+        android:background="#16253E"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="350dp">
+        tools:layout_editor_absoluteY="350dp"
+        android:padding="8dp">
 
-        <TextView
-            android:id="@+id/info_title"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Info"
-            android:textColor="#4475d0"
-            android:textSize="20sp"
-            android:textFontWeight="800"
-            android:fontFamily="@font/opensans_regular"
-            android:layout_margin="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/info_section"
+            >
+            <TextView
+                android:id="@+id/info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:textColor="#4475d0"
+                android:textSize="16sp"
+                android:textFontWeight="800"
+                android:fontFamily="@font/opensans_regular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/info_title">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/info_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="https://t.me/theChance101"
+                        android:textColor="@color/white"
+                        android:textFontWeight="800"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/invite_link"
+                        android:layout_width="79dp"
+                        android:layout_height="17dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="start"
+                        android:text="Invite Link"
+                        android:textColor="#E086858a"
+                        android:textFontWeight="800"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/info_link" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/qr_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_qr_code_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_marginTop="8dp"
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/info_section"
+            android:paddingHorizontal="20dp"
+ />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
