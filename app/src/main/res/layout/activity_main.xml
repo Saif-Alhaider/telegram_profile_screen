@@ -10,15 +10,19 @@
     >
 
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profile_image"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/landscape"
+        android:src="@drawable/the_chance"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+        />
 
     <LinearLayout
         android:id="@+id/back_edit_search"
@@ -62,7 +66,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans_regular"
             android:gravity="start"
-            android:text="Saif Alhaider"
+            android:text="The Chance"
             android:textColor="@color/white"
             android:textFontWeight="800"
             android:textSize="24sp"
@@ -77,9 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans_regular"
-            android:text="last scene recently"
+            android:text="public channel"
             android:textAlignment="center"
-            android:textColor="#E086858a"
+            android:textColor="@color/white"
             android:textFontWeight="800"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/profile_image"
@@ -90,7 +94,7 @@
     <LinearLayout
         android:id="@+id/body"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="11600dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/profile_image">
 
